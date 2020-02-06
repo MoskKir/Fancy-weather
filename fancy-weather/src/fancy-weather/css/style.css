@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+    background-position: center;    
+    color: #ffffff;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.body-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.data-container {
+  margin: 20px;
+  width: 50%;
+  height: 90%;
+}
+.manage-btn-container {
+  margin-bottom: 10px;
+}
+.city-container {
+  padding: 10px;
+  background-color: rgba(27, 28, 29, 0.897);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+.date-container {
+  padding: 0 10px;
+  background-color: rgba(27, 28, 29, 0.897);
+  text-transform: uppercase;
+  
+}
+.clock {
+  padding: 10px;
+  background-color: rgba(27, 28, 29, 0.897);
+  text-transform: uppercase;
+}
+.current-temperature {
+  padding: 10px;
+  background-color: rgba(27, 28, 29, 0.897);
+  margin: 10px 0;
+  display: flex;
+  
+}
+.current-temp-description {
+  padding: 20px;
+}
+.icon-container {
+  margin-bottom: 20px !important;
+}
+.current-temp-description div {
+  margin-bottom: 5px;
+}
+.feels-like {
+  color: red;
+}
+
+.icon-container div i {
+  font-size: 100px;
+}
+.weather-brodcast-container {
+  padding: 10px;
+  background-color: rgba(27, 28, 29, 0.897);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.brodcast-item {
+  margin: 10px;
+}
+.brodcast-item h3 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.brodcast-item :last-child h3 {
+  color: #ff0000;
+}
+.coordinate-container {
+  padding: 10px;
+  background-color: rgba(27, 28, 29, 0.897);
+  text-align: right;
+}
+.temperature1-container {
+  font-size: 12rem;
+  font-stretch: ultra-condensed;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+.temperature {
+  font-size: 50px;
+}
+i {
+  font-size: 30px;
+  position: relative;
+  top: -20px;
+}
+
+
+.map-container {
+  width: 50%;
+  margin: 20px;
+
+}
+.search-bar {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.search-btn {
+  width: 100px;
+}
+.search-input {
+  height: 25px;
+}
+
+
+.news-container {
+  font-size: 10px;
+  padding: 10px;
+  background-color: rgba(27, 28, 29, 0.897);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.news-container div {
+  margin: 5px;
+}
+.news-container div a {
+  color: #ffffff;
+  margin: 5px;
+  text-decoration: none;
+}
+.news-container div a:hover {
+  color: #ff0000;
+}
+
+
+
+.spinner-container {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+} 
+.spinner {
+    height: 100vh;
+    position: relative;
+    opacity: 1;
+    transition: opacity linear 0.1s;
+    
+  }
+  
+  .spinner::before {
+    border: solid 3px rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    content: '';
+    height: 40px;
+    width: 40px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    will-change: transform;
+    animation: 2s linear infinite spinner;
+  }
+  
+  @keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+
+  @media (max-width: 640px) {
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    .body-overlay {
+      flex-direction: column;
+    }
+    .data-container {
+      width: auto;
+    }
+    .map-container {
+      width: auto;
+      margin: 20px;
+    }
+    .manage-btn-container {
+      flex-wrap: nowrap;
+    }
+    .city-container {
+      font-size: 1.5rem;
+    }
+    .weather-brodcast-container {
+      flex-direction: column;
+    }
+    .current-temperature {
+      flex-direction: column;
+      text-align: center;
+    }
+    .temperature1-container {
+      font-size: 100px;
+      width: auto;
+    }
+    .temperature {
+      font-size: 50px;
+      text-align: center;
+    }
+    button {
+      width: 40px !important;
+      align-items: center;
+    }
+    .search-btn {
+      width: 70px !important;
+    }
+}
